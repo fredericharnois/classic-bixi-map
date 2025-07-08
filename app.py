@@ -23,7 +23,7 @@ def get_bixi_data():
     stations_list = []
     for station in station_status["data"]["stations"]:
         station_id = station["station_id"]
-        num_analog_bikes_available = station["num_bikes_available"] - station["num_ebikes_available"]
+        num_classic_bikes_available = station["num_bikes_available"] - station["num_ebikes_available"]
 
         station_dict = {}
         if station_id in station_info_dict:
@@ -31,7 +31,7 @@ def get_bixi_data():
             station_dict["name"] = station_info["name"]
             station_dict["lat"] = station_info["lat"]
             station_dict["lon"] = station_info["lon"]
-            station_dict["analog_bikes"] = num_analog_bikes_available
+            station_dict["classic_bikes"] = num_classic_bikes_available
             stations_list.append(station_dict)
         
     return stations_list
@@ -44,7 +44,7 @@ def create_marker(lat, lon, name, bikes, color, map):
         Classic bikes: {bikes}
         """,
         icon=folium.Icon(color=color, icon="person-biking", prefix="fa"),
-        tooltip=f"{name}: {bikes} analog bikes"
+        tooltip=f"{name}: {bikes} classic bikes"
     ).add_to(map)
 
 @app.route('/')
@@ -81,14 +81,14 @@ def index():
     stations = get_bixi_data()
 
     for station in stations:
-        if station["analog_bikes"] == 0:
-            create_marker(station["lat"], station["lon"], station["name"], station["analog_bikes"], "red", montreal_map)
+        if station["classic_bikes"] == 0:
+            create_marker(station["lat"], station["lon"], station["name"], station["classic_bikes"], "red", montreal_map)
 
-        elif 0 < station["analog_bikes"] < 4:
-            create_marker(station["lat"], station["lon"], station["name"], station["analog_bikes"], "orange", montreal_map)
+        elif 0 < station["classic_bikes"] < 4:
+            create_marker(station["lat"], station["lon"], station["name"], station["classic_bikes"], "orange", montreal_map)
 
         else:
-            create_marker(station["lat"], station["lon"], station["name"], station["analog_bikes"], "green", montreal_map)
+            create_marker(station["lat"], station["lon"], station["name"], station["classic_bikes"], "green", montreal_map)
     
     map_html = montreal_map._repr_html_()
     return render_template("index.html", map_html=map_html)
