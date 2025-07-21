@@ -1,6 +1,6 @@
 # Classic BIXI Map
 
-![Map of Montreal BIXI stations showing classic bike availability with color-coded icons (red, orange, green) and a legend at the top.](https://media.discordapp.net/attachments/1377722650989690925/1395851340072095774/classic-bixi-map.onrender.com__lat45.5273lon-73.5704.png?ex=687bf35d&is=687aa1dd&hm=df74326c0cf664ea7414186b63e04e005878ea5e7b6e38486734f1a381ba3328&=&format=webp&quality=lossless&width=1587&height=1194)
+![Map of Montreal BIXI stations showing classic bike availability with color-coded icons (red, orange, green) and a legend at the top.](https://media.discordapp.net/attachments/1377722650989690925/1395851340072095774/classic-bixi-map.onrender.com__lat45.5273lon-73.5704.png?ex=687fe7dd&is=687e965d&hm=9c8489a678c84e59849a1c7c4e56cc40a92c3b45f3e4f6d5acc3942511a748e4&=&format=webp&quality=lossless&width=1587&height=1194)
 
 A web application that displays real-time BIXI bike station data with a focus on classic (non-electric) bikes availability in Montreal.
 
