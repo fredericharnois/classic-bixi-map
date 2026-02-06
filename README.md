@@ -9,7 +9,7 @@ A web application that displays real-time BIXI bike station data with a focus on
 
 ## Background
 
-This project was created out of personal frustration when looking for classic (non-electric) BIXI bikes around Montreal. After seeing multiple Reddit posts mentioning that some docking stations seem to have predominantly electric bikes, I decided to build a tool that would make it easier to find classic bikes specifically.
+This project was created out of a personal need to easily locate classic (non-electric) BIXI bikes around Montreal. After seeing multiple Reddit posts mentioning that some docking stations seem to have predominantly electric bikes, I decided to build a tool that would make it easier to find classic bikes specifically.
 
 While the official BIXI app does include a filter for bike types, it doesn't save your preference for displaying only classic bikes - you have to re-apply the filter every time you use the app. This project also served as a learning opportunity to explore map generation and to familiarize myself with working with GBFS (General Bikeshare Feed Specification) feeds.
 
